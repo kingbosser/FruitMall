@@ -1,0 +1,44 @@
+extends ./admin.pug
+block content
+	.section-wrap
+		h1 产品信息编辑
+		form(method="post" action="#")
+			ul
+				li
+					label 商品名称：
+					input(type="text")
+				li
+					label 商品图片：
+					input(type="file")
+				li
+					label 商品市场价：
+					input(type="text")
+				li
+					label 商品售价：
+					input(type="text")
+				li
+					input(type="submit" value="添加")
+	.section-wrap
+		h1 产品列表
+		table
+			thead
+				tr
+					th 商品图片
+					th 商品标题
+					th 市场价
+					th 售价
+					th 添加日期
+					th(colspan="2") 操作
+			tbody
+				tr
+					td
+						img(src="/static/images/icon.gif")
+					td 正品柑橘
+					td 100
+					td 50
+					td 1992.1.2
+					td 删除
+					td 修改
+			tfoot
+				tr
+					td(colspan="7") 已经是全部添加商品

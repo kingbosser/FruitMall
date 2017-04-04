@@ -1,0 +1,94 @@
+.login{
+	width: 1200px;
+	margin:0 auto;
+	padding: 100px 0px;
+}
+.login-left{
+	float: left;
+}
+.login-right{
+	width: 380px;
+	float: right;
+	border: 1px solid #ddd;
+}
+.login-right h1{
+	font-size: 24px;
+	color: red;
+	font-weight: normal;
+	padding: 14px 0px 14px 10px;
+	border-bottom: 1px solid #ddd;
+}
+.login-form{
+	width: 100%;
+}
+.login-form li{
+	padding: 14px 0px 14px 10px;
+}
+.login-form li label{
+	font-size: 14px;
+	color: #333;
+	padding-right: 10px;
+	display: inline-block;
+	width: 60px;
+}
+.login-form li.rem-password label{
+	display: inline-block;
+	width: 260px;
+}
+.login-form li.rem-password label a{
+	color: blue;
+	padding: 0px 4px;
+	cursor: pointer;
+}
+.login-form li input[type="text"]{
+	width: 260px;
+	height: 26px;
+}
+.login-form li input[type="password"]{
+	width: 260px;
+	height: 26px;
+}
+.login-form li input[type="checkbox"]{
+	margin-right: 10px;
+}
+.login-form li.login-form-yzm input{
+	width: 80px;
+	padding-left: 4px;
+}
+.login-form li.login-form-yzm img{
+	margin: 0px 10px;
+}
+.login-form li.login-btn input{
+	width: 100px;
+	height: 40px;
+	background-color: red;
+	border: 1px solid #ddd;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.need-signup{
+	height: 40px;
+	width: 100%;
+	background-color: #efefef;
+}
+.need-signup p{
+	height: 100%;
+	line-height: 40px;
+	float: left;
+	width: 100px;
+	padding-left: 10px;
+	color: red;
+}
+.need-signup a{
+	width: 80px;
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid #cdcdcd;
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	margin: 5px 26px 0px 0px;
+}

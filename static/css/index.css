@@ -1,0 +1,240 @@
+/*banner 背景*/
+.banner{
+	width: 100%;
+	height: 480px;
+	overflow: hidden;
+	position: relative;
+}
+.banner ul{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.banner ul li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -960px;
+	margin-top: -240px;
+	display: none;
+}
+.banner ul li.img-active{
+	display: list-item;
+}
+.focus{
+	width: 48px;
+	font-size: 0px;
+	position: absolute;
+	z-index: 100;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -24px;
+}
+.focus span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	margin-right: 8px; 
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+.focus span.focus-active{
+	background-color: #393;
+}
+
+/*关于我们*/
+.aboutUs{
+	width: 100%;
+	border-bottom: 2px dotted #393;
+}
+.title{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 40px 0px 40px 0px;
+}
+.title h1{
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	color: #666;
+}
+.title span{
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #999;
+}
+.aboutUs-cont,.baike-cont{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.aboutUs-cont-left,.baike-cont-left{
+	float: left;
+	width: 560px;
+	height: 370px;
+}
+.aboutUs-cont-left img,.baike-cont-left img{
+	width: 100%;
+	height: 100%;
+}
+.aboutUs-cont-right,.baike-cont-right{
+	float: right;
+	width: 560px;
+}
+.aboutUs-cont-right p{
+	width: 100%;
+	font-size: 12px;
+	text-indent: 2em;
+	line-height: 1.5;
+}
+.more{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 40px 0px 30px 0px;
+}
+.more a{
+	display: block;
+	width: 160px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #393;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 50px;
+	color: #fff;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.product{
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px dotted #393;
+}
+.wxgd-main{
+	/*宽度由内容撑开*/
+	/*高度已定,最好和放大后的图片等高*/
+	height: 275px;
+	margin: 0 auto;
+	font-size: 0px;/*去掉inline-block的4px间距*/
+	display:inline-block;/*自适应内容宽度*/ 
+	/*兼容*/
+	*display:inline; 
+	*zoom:1;
+}
+.wxgd-picshow{
+	/*宽度自适应*/
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+.wxgd-list{
+	/*宽度自适应*/
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.wxgd-item{
+	float: left;
+	/*宽度自定义*/
+	width: 275px;
+	height: 100%;
+	position: relative;
+
+
+
+	/*此处z-index的值等于你想展示的图片数目*/
+	z-index: 4;
+	/**************************/
+
+
+	overflow: hidden;
+}
+.wxgd-item a{
+	display: block;
+	/*单位图片的大小和位置固定*/
+	width: 200px;
+	height: 200px;
+	/**************************/
+	position: absolute;
+	/*下面的方式智能兼容到IE9*/
+	/*top: 50%;
+	left: 50%;
+	-webkit-transform:translate(-50%,-50%); 
+	-o-transform:translate(-50%,-50%); 
+	-moz-transform:translate(-50%,-50%); 
+	-ms-transform:translate(-50%,-50%); 
+	transform:translate(-50%,-50%); */
+	/*使元素居中*/
+	/*下面的方式智能兼容到IE8*/
+	/*overflow: auto;*//*避免元素溢出*/
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+/*移动到图片上会出现类，蒙版*/
+/*.wxgd-item a .mb{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	display: none;
+	padding-top: 40px;
+}
+.active a .mb{
+	display: block;
+}*/
+.wxgd-btn{
+	display: inline-block;
+	width: 50px;
+	height: 100%;
+}
+.wxgd-prev-btn{
+	background: url(/static/images/btn_l.png) no-repeat center center;
+}
+.wxgd-next-btn{
+	background: url(/static/images/btn_r.png) no-repeat center center;
+}
+
+
+/*水果百科*/
+.baike{
+	width: 100%;
+}
+.baike-cont-right ul{
+	width: 100%;
+}
+.baike-cont-right ul li{
+	margin-top: 10px;
+	list-style: disc;
+}
+.baike-cont-right ul li:first-of-type{
+	margin-top: 0px;
+}
+.baike-cont-right ul li a{
+	font-size: 12px;
+	line-height: 1.5;
+}
+

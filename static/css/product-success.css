@@ -1,0 +1,39 @@
+.success{
+	margin: 0 auto;
+	width: 1200px;
+	padding: 20px 0px;
+}
+.success h1{
+	font-size: 16px;
+	font-weight: normal;
+}
+.success p{
+	width: 100%;
+	height: 120px;
+	line-height: 120px;
+	font-size: 16px;
+	text-align: center;
+}
+.success-order{
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #fffce3;
+	margin-bottom: 130px;
+}
+.success-order p{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 20px 0px 10px 20px;
+}
+.success-order p span{
+	font-weight: normal;
+	padding-left: 20px;
+}
+.success-order p input{
+	width: 100px;
+	background-color: red;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #ddd;
+	color: #fff;
+}

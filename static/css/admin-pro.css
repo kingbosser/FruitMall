@@ -1,0 +1,57 @@
+.section-wrap{
+	width: 92%;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 30px;
+	min-width: 800px;
+	padding: 0px 20px;
+	padding-bottom: 30px;
+}
+.section-wrap h1{
+	font-size: 18px;
+	color: #333;
+	font-weight: normal;
+	height: 30px;
+	line-height: 30px;
+	padding: 20px 20px;
+}
+.section-wrap li{
+	height: 50px;
+}
+.section-wrap li label{
+	font-size: 13px;
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+.section-wrap li input[type="submit"]{
+	width: 100px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	background-color: #e34e42;
+	border: none;
+	color: #fff;
+	margin-left: 40px;
+}
+.section-wrap thead th{
+	height: 36px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+}
+.section-wrap tbody td{
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid #ddd;
+}
+.section-wrap tbody td img{
+	width: 100px;
+	height: 100px;
+}
+.section-wrap tfoot td{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid #ddd;
+}

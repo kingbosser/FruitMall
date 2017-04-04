@@ -1,0 +1,34 @@
+extends ./layout.pug
+block content
+	.login.clearfix
+		.login-left
+			img(src="/static/images/login.png")
+		.login-right.signup-right
+			h1 用户注册
+			form.login-form(type="post" action="#")
+				ul
+					li
+						label(for="") 账号:
+						input(type="text" id="")
+					li
+						label(for="") 密码:
+						input(type="text" id="")
+					li
+						label(for="") 确认密码:
+						input(type="password" id="")
+					li.login-form-yzm
+						label(for="") 验证码：
+						input(type="text" placeholder="输入验证码")
+						img(src="/static/images/ii.png")
+						a(href="javascript:;") 看不清，换一张试试？
+					li.rem-password
+						input(type="checkbox" name="")
+						label(for="")
+							| 我已同意
+							a 会员注册协议
+							| 和
+							a 隐私保护条款
+					li.login-btn
+						input(type="submit" value="注册")
+			.need-signup
+				p 注册即是会员

@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		link(rel="stylesheet" type="text/css" href="/static/css/reset.css")
+		link(rel="stylesheet" type="text/css" href="/static/css/admin-login.css")
+		script(src="/static/js/jquery-1.11.3.min.js")
+		title 后台登录
+	body
+		.admin-login-wrap
+			.hr
+			.admin-login
+				p 后台管理登录
+				form(method="post" action="#")
+					label 用户名：
+					input(type="text")
+					label 密码：
+					input(type="password")
+				p.admin-login-sub
+					input(type="submit")
+

@@ -1,0 +1,31 @@
+extends ./layout.pug
+block content
+	.subnav
+		a(href="/") 首页
+		span.rightgap >
+		a(href="/product") 水果选购
+		span.rightgap >
+		span 正品柑橘
+	.prodetail
+		h1 【特价】新西兰绿奇异果
+		.detail-cont.clearfix
+			.detail-pic
+				img(src="/static/images/1.jpg")
+			.detail-right
+				dl
+					dt 销售价:
+					dd.detail-price ￥50
+				dl
+					dt 市场价：
+					dd
+						del ￥100
+				dl
+					dt 送至：
+					dd 重庆邮电大学
+				dl
+					dt 数量：
+					dd
+						a(href="javascript:;") -
+						input(type="text" name="detail-num" value="1" min="1" max="9999")
+						a(href="javascript:;") +
+				input(type="submit" value="加入购物车")

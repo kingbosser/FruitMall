@@ -1,0 +1,249 @@
+/*顶部  欢迎  登录注册  联系方式*/
+.top{
+	width: 100%;
+	background-color: #f2f2f2;
+	height: 28px;
+}
+.top-welcome{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 28px;
+	font-size: 12px;
+	font-weight: normal;
+}
+.top-welcome-left{
+	float: left;
+}
+.top-welcome-left strong{
+	font-weight: normal;
+}
+.top-welcome-left span{
+	padding: 0px 6px 0px 20px;
+}
+.top-welcome-left div{
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	padding: 4px 16px 4px 4px;
+	position: relative;
+	display: inline-block;
+	line-height: 1;
+}
+.top-welcome-left div:after{
+	content: '';
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-width: 4px;
+	border-color: red transparent transparent;
+	border-style: solid dashed dashed;
+	position: absolute;
+	top: 8px;
+	right: 5px;
+}
+.top-welcome-right{
+	float: right;
+}
+.top-welcome-right span{
+	padding-right: 20px;
+}
+.top-welcome-right form{
+	display: inline-block;
+}
+.top-welcome-right form input{
+	border: none;
+	background-color: #f2f2f2;
+	padding-bottom: 3px;
+	color: red;
+}
+.top-welcome-right a{
+	margin-left: 20px;
+}
+.top-welcome-right a:first-of-type{
+	color: red;
+}
+.top-welcome-right i{
+	padding: 0px 20px;
+	font-style: normal;
+}
+.top-welcome-right p{
+	display: inline-block;
+	background: url(/static/images/tel.png) no-repeat left center;
+	padding-left: 14px;
+	color: red;
+	font-weight: bold;
+}
+
+/*header logo 搜索 购物车*/
+.header{
+	width: 100%;
+	background-color: #fff; 
+}
+.header-main{
+	width: 1200px;
+	margin: 0 auto;
+}
+.header-main-left{
+	float: left;
+}
+.header-left-logo{
+	height: 100px;
+}
+.header-left-logo img{
+	height: 100%;
+}
+.header-main-right{
+	float: right;
+	overflow: hidden;
+	margin-top: 20px;
+}
+.header-main-right p{
+	clear: both;
+	padding-top: 10px;
+}
+.header-main-right p span{
+	padding: 0px 6px;
+}
+.header-right-search{
+	width: 600px;
+	border: 3px solid #393;
+	float: left;
+}
+.header-right-search form{
+	width: 100%;
+	overflow: hidden;
+}
+.header-right-search input{
+	float: left;
+	border: none;
+}
+.header-right-search input[type="text"]{
+	height: 22px;
+	padding: 8px 0px 8px 30px;
+	width: 468px;
+	font-size: 13px; 
+}
+.header-right-search input[type="submit"]{
+	width: 102px;
+	height: 38px;
+	background-color: #393;
+	text-align: center;
+	line-height: 38px;
+	font-size: 20px;
+	color: #fff;
+}
+.header-right-car{
+	float: left;
+	width: 140px;
+	border: 1px solid #ddd;
+	background-color: #f2f2f2;
+	margin-left: 60px;
+}
+.header-right-car p{
+	display: inline-block;
+	padding: 16px 20px 16px 26px;
+}
+.header-right-car span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: #393;
+	text-align: center;
+	line-height: 16px;
+	font-size: 12px;
+	color: #fff;
+}
+.nav{
+	width: 100%;
+	background-color: #393;
+}
+.nav ul{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.nav ul li{
+	float: left;
+	height: 40px;
+}
+.nav ul li img{
+	width: 40px;
+	height: 40px;
+}
+.nav ul li a{
+	display: block;
+	height: 100%;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0px 40px;
+}
+.nav ul li:first-of-type a{
+	padding-left: 0px;
+}
+.nav ul li a:hover{
+	background-color: #32CD32;
+}
+
+
+/*link 链接*/
+.link{
+	width: 100%;
+	background-color: #999;
+	padding-bottom: 20px;
+}
+.link-wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.link-list{
+	float: left;
+}
+.link-list dl{
+	float: left;
+	margin-left: 100px;
+}
+.link-list dl:first-of-type{
+	margin-left: 0px;
+}
+.link-list dt{
+	margin-top: 40px;
+}
+.link-list dd{
+	margin-top: 16px;
+}
+.link-list a{
+	font-size: 12px;
+	color: #fff;
+}
+.link-list dt a{
+	font-size: 15px;
+}
+.link-right{
+	float: right;
+	padding-top: 40px;
+}
+.link-right img{
+	width: 160px;
+	height: 120px;
+}
+.link-right p{
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.5;
+}
+
+/*版权*/
+.copy{
+	width: 100%;
+	height: 30px;
+	background-color: #666;
+}
+.copy p{
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+}

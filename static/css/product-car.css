@@ -1,0 +1,124 @@
+.car-title{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0px; 
+}
+.car-title h1{
+	font-size: 24px;
+	font-weight: normal;
+}
+.car-step{
+	width: 1200px;
+	margin: 0 auto;
+}
+.car-step tr{
+
+}
+.car-step td{
+	height: 30px;
+	text-align: center;
+}
+.car-step td.car-bg{
+	background-color: #ddd;
+	text-align: left;
+	padding-left: 10px;
+}
+.car-step td.car-bg i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #999;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color: #fff;
+	font-style: normal;
+	margin-right: 10px;
+}
+.car-step td.car-active{
+	background-color: #32CD32;
+	color: #fff;
+}
+.car-step td.car-active i{
+	background-color: #fff;
+	color: #32CD32;
+}
+.car-content{
+	width: 1200px;
+	margin: 0 auto;
+}
+.car-content h2{
+	font-size: 16px;
+	color: #666;
+	font-weight: normal;
+	padding: 20px 0px 10px 0px;
+}
+.car-content table{
+	border: 1px solid #ccc;
+	margin-bottom: 50px;
+}
+.car-content thead tr{
+	background-color: #ddd;
+	height: 36px;
+}
+.car-content tbody tr{
+	border-bottom: 1px solid #ddd;
+}
+.car-content tbody td{
+	text-align: center;
+}
+.car-content tbody td a{
+	float: left;
+	border: 1px solid #ddd;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+.car-content tbody td a:first-of-type{
+	margin-left: 60px;
+}
+.car-content tbody td input{
+	float: left;
+	border: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd; 
+	height: 20px;
+	width: 40px;
+	text-align: center;
+	line-height: 20px;
+}
+.car-content tbody a.car-content-img{
+	display: block;
+	float: none;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	padding: 20px 0px;
+	border: none;
+}
+.car-content tbody a.car-content-img img{
+	width: 100%;
+	height: 100%;
+}
+.car-content tfoot tr{
+	height: 60px;
+	border-bottom: 1px solid #ddd;
+}
+.car-content tfoot td{
+	text-align: center;
+	height: 100%;
+	line-height: 60px;
+}
+.car-content tfoot td input{
+	width: 100px;
+	height: 40px;
+	background-color: red;
+	color: #fff;
+	border: 1px solid #ddd;
+}

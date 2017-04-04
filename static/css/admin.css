@@ -1,0 +1,97 @@
+body{
+	background-color: #f0f2f5;
+}
+.admin-wrap{
+	width: 100%;
+}
+.admin-wrap-left{
+	width: 260px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: #34485b; 
+}
+.admin-title{
+	padding: 20px 0px;
+	background-color: #304354;
+}
+.admin-title h1{
+	width: 100%;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	font-weight: normal;
+}
+.admin-section{
+	width: 100%;
+	background-color: #34485b;
+	height: 1200px; 
+}
+.admin-section ul{
+	width: 100%;
+}
+.admin-section ul li{
+	width: 100%;
+	border-bottom: 1px solid #384e61;
+	position: relative;
+}
+.admin-section ul li.admin-active{
+	background-color: #e34e42;
+}
+.admin-section ul li.admin-active li{
+	background-color: #34485b;
+}
+.admin-section ul li i:first-of-type{
+	position: absolute;
+	left: 46px;
+	top: 12px;
+}
+.admin-section ul li i:last-of-type{
+	position: absolute;
+	right: 8px;
+	top: 12px;
+}
+.admin-section ul li.admin-active i:last-of-type{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	/* Opera */
+}
+.admin-section ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 60px;
+	font-size: 13px;
+	color: #fff;
+}
+.admin-section ul li ul li a:hover{
+	color: #e34e42;
+}
+.admin-wrap-right{
+	margin-left: 260px;
+}
+.admin-welcome{
+	width: 100%;
+	background-color: #2b3b4b;
+	height: 60px;
+}
+.admin-welcome h2{
+	font-size: 13px;
+	color: #fff;
+	font-weight: normal;
+	float: right;
+	height: 100%;
+	line-height: 60px;
+}
+.admin-welcome input{
+	width: 100px;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	line-height: 60px; 
+	float: right;
+}

@@ -1,0 +1,169 @@
+.subnav{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0px;
+	font-size: 14px;
+}
+.subnav a{
+	color: #666;
+}
+.subnav span{
+	color: #999;
+}
+.subnav span.rightgap{
+	color: #666;
+	padding: 0px 6px;
+}
+.proselect{
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+.proselect-tit{
+	padding: 9px 10px;
+	background-color: #f7f5f6;
+}
+.proselect-tit-left{
+	float: left;
+	font-size: 13px;
+}
+.proselect-tit-left strong{
+	color: #333;
+}
+.proselect-tit-left span i{
+	color: red;
+	padding: 0px 2px;
+}
+.proselect-tit-right{
+	float: right;
+}
+.proselected{
+	width: 100%;
+}
+.proselected dl{
+	padding: 9px 10px;
+}
+.proselected dt{
+	float: left;
+	width: 80px;
+	text-align: right;
+}
+.proselected dd{
+	float: left;
+	margin-left: 20px;
+}
+.proclassifyrule{
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	margin-top: 20px;
+}
+.prosort{
+	float: left;
+	padding: 8px 10px;
+}
+.prosort input{
+	margin-left: 20px;
+	margin-right: 4px;
+}
+.pageview{
+	float: right;
+	padding: 8px 10px;
+}
+.pagecont{
+	float: left;
+}
+.pagecont span{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+}
+.pageaction{
+	float: left;
+}
+.pageaction a{
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+.pageaction a i{
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	display: block;
+	border: 4px;
+	top: 7px;
+	left: 6px;
+}
+.pageaction a.pageprev i{
+	border-style: dashed solid dashed dashed;
+	border-color: transparent #666 transparent transparent;
+}
+.pageaction a.pagenext i{
+	border-style: dashed dashed dashed solid;
+	border-color: transparent transparent transparent #666;
+}
+.produclist{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.produclist ul{
+	width: 1280px;
+	overflow: hidden;
+}
+.produclist li.proitem{
+	width: 240px;
+	float: left;
+	margin-right: 80px;
+	padding: 30px 0px;
+}
+.propic{
+	width: 100%;
+	height: 240px;
+}
+.propic img{
+	width: 100%;
+	height: 100%;
+}
+.proitem h3.proname{
+	padding: 20px 0px 10px 0px;
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
+}
+.proprice{
+	width: 100%;
+
+}
+.proprice ins{
+	color: red;
+	font-size: 14px;
+	text-decoration: none;
+}
+.proprice del{
+	color: #999;
+	font-size: 13px;
+	padding-left: 20px;
+}
+.proaction{
+	width: 100%;
+	padding-top: 10px;
+}
+.proaction a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	background-color: #00cc00;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+}

@@ -1,0 +1,90 @@
+extends ./layout.pug
+block content
+	.subnav
+		a(href="#") 首页
+		span.rightgap >
+		span 水果选购
+	.proselect
+		.proselect-tit.clearfix
+			.proselect-tit-left
+				strong 商品筛选
+				span
+					| (共
+					i 49
+					| 件商品)
+			.proselect-tit-right
+				p 重置筛选项&nbsp;>
+		.proselected
+			dl.yourselected.clearfix
+				dt 您已选择：
+				dd 
+			dl.proclassify.clearfix
+				dt 水果分类：
+				dd 柑橘
+				dd 葡萄
+	.proclassifyrule.clearfix
+		.prosort
+			label 排序：
+			select
+				option(value="desc-price") 按价格从高到低
+				option(value="asc-price") 按价格从低到高
+				option(value="cont-buy") 销量从高到底
+			input(type="checkbox" name="is-stroe" id="is-stroe")
+			label(for="is-stroe") 仅显示有货
+		.pageview
+			.pagecont
+				span.pagecurrent 1
+				| /
+				span.pagetotal 1
+			.pageaction
+				a(href="javascript:;" class="pageprev")
+					i
+				a(href="javascript:;" class="pagenext")
+					i
+	.produclist
+		ul
+			li.proitem
+				a(class="propic" href="/product/detail")
+					img(src="/static/images/1.jpg")
+				h3.proname 正品柑橘
+				.proprice
+					ins ￥89
+					del 市场价：￥100
+				.proaction
+					a 加入购物车
+			li.proitem
+				a.propic
+					img(src="/static/images/1.jpg")
+				h3.proname 正品柑橘
+				.proprice
+					ins ￥89
+					del 市场价：￥100
+				.proaction
+					a 加入购物车
+			li.proitem
+				a.propic
+					img(src="/static/images/1.jpg")
+				h3.proname 正品柑橘
+				.proprice
+					ins ￥89
+					del 市场价：￥100
+				.proaction
+					a 加入购物车
+			li.proitem
+				a.propic
+					img(src="/static/images/1.jpg")
+				h3.proname 正品柑橘
+				.proprice
+					ins ￥89
+					del 市场价：￥100
+				.proaction
+					a 加入购物车
+			li.proitem
+				a.propic
+					img(src="/static/images/1.jpg")
+				h3.proname 正品柑橘
+				.proprice
+					ins ￥89
+					del 市场价：￥100
+				.proaction
+					a 加入购物车
