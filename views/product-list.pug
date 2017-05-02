@@ -43,48 +43,14 @@ block content
 					i
 	.produclist
 		ul
-			li.proitem
+			li(class="proitem" ng-repeat="product in products")
 				a(class="propic" href="/product/detail")
-					img(src="/static/images/1.jpg")
-				h3.proname 正品柑橘
+					img(ng-src="/static/images/{{product.imgFile}}" ng-click="setProduct(product._id)")
+				h3.proname(ng-bind="product.title")
 				.proprice
-					ins ￥89
-					del 市场价：￥100
+					ins(ng-bind="product.shopPrice")
+					del
+						| 市场价：￥
+						span(ng-bind="product.delPrice")
 				.proaction
-					a 加入购物车
-			li.proitem
-				a.propic
-					img(src="/static/images/1.jpg")
-				h3.proname 正品柑橘
-				.proprice
-					ins ￥89
-					del 市场价：￥100
-				.proaction
-					a 加入购物车
-			li.proitem
-				a.propic
-					img(src="/static/images/1.jpg")
-				h3.proname 正品柑橘
-				.proprice
-					ins ￥89
-					del 市场价：￥100
-				.proaction
-					a 加入购物车
-			li.proitem
-				a.propic
-					img(src="/static/images/1.jpg")
-				h3.proname 正品柑橘
-				.proprice
-					ins ￥89
-					del 市场价：￥100
-				.proaction
-					a 加入购物车
-			li.proitem
-				a.propic
-					img(src="/static/images/1.jpg")
-				h3.proname 正品柑橘
-				.proprice
-					ins ￥89
-					del 市场价：￥100
-				.proaction
-					a 加入购物车
+					a(ng-click="addToCart(product._id)") 加入购物车

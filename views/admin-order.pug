@@ -14,14 +14,14 @@ block content
 					th 下单时间
 					th 操作
 			tbody
-				tr
-					td 111
-					td 未发货
-					td 正品柑橘
-					td 10
-					td 178931323
-					td kingbosss
-					td 1992.1.2
+				tr(ng-repeat="order in orders")
+					td(ng-bind="$index+1")
+					td(ng-bind="order.status")
+					td(ng-bind="order.items[0].product[0].title")
+					td(ng-bind="order.items[0].quantity")
+					td(ng-bind="order.address[0].tel")
+					td(ng-bind="order.address[0].name")
+					td(ng-bind="order.timestamp")
 					td 删除
 			tfoot
 				tr

@@ -5,24 +5,27 @@ block content
 			img(src="/static/images/login.png")
 		.login-right.signup-right
 			h1 用户注册
-			form.login-form(type="post" action="#")
+			form.login-form(method="post" action="/signup")
 				ul
 					li
 						label(for="") 账号:
-						input(type="text" id="")
+						input(type="text" id="" name="username")
 					li
 						label(for="") 密码:
 						input(type="text" id="")
 					li
 						label(for="") 确认密码:
-						input(type="password" id="")
+						input(type="password" id="" name="password")
+					li
+						label(for="") 邮箱:
+						input(type="text" id="" name="email")
 					li.login-form-yzm
 						label(for="") 验证码：
 						input(type="text" placeholder="输入验证码")
 						img(src="/static/images/ii.png")
 						a(href="javascript:;") 看不清，换一张试试？
 					li.rem-password
-						input(type="checkbox" name="")
+						input(type="checkbox" name="rule")
 						label(for="")
 							| 我已同意
 							a 会员注册协议

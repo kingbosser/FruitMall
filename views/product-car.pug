@@ -24,46 +24,32 @@ block content
 				thead
 					tr
 						th 商品图片
-						th 商品名称
-						th 销售价
+						th 商品名称 
 						th 数量
-						th 小计
+						th 销售价
 						th 操作
 				tbody
-					tr
+					tr(ng-repeat="item in users.cart" ng-init="product=item.product[0]")
 						td
 							a(href="" class="car-content-img")
-								img(src="/static/images/1.jpg")
-						td 正品橘子，好吃
-						td ￥50
+								img(ng-src="/static/images/{{product.imgFile}}" ng-click="setProduct(product._id)")
+						td(bg-bind="product.title")
 						td
 							a(href="javascript:;") -
-							input(type="text" value="1")
+							input(type="text" value="{{item.quantity}}")
 							a(href="javascript:;") +
-						td ￥50
-						td 删除
-					tr
-						td
-							a(href="" class="car-content-img")
-								img(src="/static/images/1.jpg")
-						td 正品橘子，好吃
-						td ￥50
-						td
-							a(href="javascript:;") -
-							input(type="text" value="1")
-							a(href="javascript:;") +
-						td ￥50
-						td 删除
+						td(bg-bind="product.shopPrice")
+						td(ng-click="deleteFromCart(product._id)") 删除
 				tfoot
 					tr
 						td(colspan="4")
 						td 总金额
-						td ￥50
+						td ￥#{cartTotal()}
 					tr
 						td
-							a 清空购物车
+							a(ng-click=".emptyCart()") 清空购物车
 						td(colspan="3")
 						td
-							a 继续购物
+							a(href="/product/list") 继续购物
 						td
 							input(type="submit" value="下单结算")

@@ -29,18 +29,18 @@ block content
 							td(colspan="1")
 							td 收货地址：
 							td
-								input(type="text")
+								input(type="text" ng-model="users.address[0].addr")
 							td(colspan="12")
 						tr
 							td(colspan="1")
 							td 收货人姓名：
 							td
-								input(type="text")
+								input(type="text" ng-model="users.address[0].name")
 						tr
 							td(colspan="1")
 							td 联系方式：
 							td
-								input(type="text")
+								input(type="text" ng-model="users.address[0].tel")
 						tr
 							td(colspan="1")
 							td
@@ -77,11 +77,11 @@ block content
 							td 销售价
 							td 数量
 							td 小计
-						tr
-							td(colspan="6") 【特价】台湾茂谷柑水分足原产地：中国、重量：2斤
-							td ￥50
-							td 1
-							td ￥50
+						tr(ng-repeat="item in users.cart" ng-init="product=item.product[0]")
+							td(colspan="6") #{product.title}
+							td ￥#{product.shopPrice}
+							td #{item[0].quantity}
+							td ￥#{product.shopPrice}*#{item[0].quantity}
 						tr
 							td(colspan="8")
 							td.order-detail-sub

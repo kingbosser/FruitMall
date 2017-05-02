@@ -20,7 +20,6 @@
 	padding-left: 10px;
 }
 .admin-login form{
-	padding-bottom: 50px;
 	background-color: #344050;
 }
 .admin-login label{
@@ -39,6 +38,7 @@
 .admin-login p.admin-login-sub{
 	height: 42px;
 	padding-top: 10px;
+	margin-top: 50px;
 }
 .admin-login p.admin-login-sub input{
 	display: block;

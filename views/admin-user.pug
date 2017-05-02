@@ -13,12 +13,12 @@ block content
 					th 最后登录时间
 					th 操作
 			tbody
-				tr
-					td 112
+				tr(ng-repeat="user in users")
+					td(ng-bind="$index+1")
 					td
 						img(src="/static/images/icon.gif")
-					td kingboss
-					td 113873672@qq.com
+					td(ng-bind="user.username")
+					td(ng-bind="user.email")
 					td vip
 					td 1992.1.2
 					td 删除

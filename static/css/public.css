@@ -44,6 +44,9 @@
 .top-welcome-right{
 	float: right;
 }
+.top-welcome-right div{
+	display: inline-block;
+}
 .top-welcome-right span{
 	padding-right: 20px;
 }

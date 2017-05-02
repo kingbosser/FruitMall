@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="myApp")
 	head
 		meta(charset='utf-8')
 		link(rel="stylesheet" type="text/css" href="/static/css/reset.css")
@@ -13,8 +13,9 @@ html
 		link(rel="stylesheet" type="text/css" href="/static/css/login.css")
 		script(src="/static/js/jquery-1.11.3.min.js")
 		script(src="/static/js/angular.min.js")
+		script(src="/static/js/angular-controller.js")
 		title 老王农场
-	body
+	body(ng-controller="myController")
 		.top
 			.top-welcome(class="clearfix")
 				.top-welcome-left
@@ -22,11 +23,13 @@ html
 					span 送货至：
 					div 重庆市 
 				.top-welcome-right
-					span 王鹏宇
-					form(method="post" action="#")
-						input(type="submit" value="注销")
-					a(href="#") 登录
-					a(href="#") 注册
+					div
+						span #{username}
+						form(method="get" action="/logout")
+							input(type="submit" value="注销")
+					div
+						a(href="/login") 登录
+						a(href="/signup") 注册
 					i |
 					p 18883993424
 		.header
@@ -57,7 +60,7 @@ html
 				li
 					a(href="") 关于我们
 				li
-					a(href="/product") 水果选购
+					a(href="/product/list") 水果选购
 				li
 					a(href="") 水果百科
 				li

@@ -5,27 +5,27 @@ block content
 		span.rightgap >
 		a(href="/product") 水果选购
 		span.rightgap >
-		span 正品柑橘
+		span(ng-bind="product.title")
 	.prodetail
-		h1 【特价】新西兰绿奇异果
+		h1(ng-bind="product.title")
 		.detail-cont.clearfix
 			.detail-pic
-				img(src="/static/images/1.jpg")
+				img(ng-src="/static/images/{{product.imgFile}}")
 			.detail-right
 				dl
 					dt 销售价:
-					dd.detail-price ￥50
+					dd.detail-price(ng-bind="product.delPrice")
 				dl
 					dt 市场价：
 					dd
-						del ￥100
+						del(ng-bind="product.shopPrice")
 				dl
 					dt 送至：
-					dd 重庆邮电大学
+					dd(ng-bind="users.address[0]")
 				dl
 					dt 数量：
 					dd
 						a(href="javascript:;") -
 						input(type="text" name="detail-num" value="1" min="1" max="9999")
 						a(href="javascript:;") +
-				input(type="submit" value="加入购物车")
+				input(type="submit" value="加入购物车" ng-click="addToCart(product._id)")

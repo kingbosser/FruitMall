@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="adminApp")
 	head
 		meta(charset='utf-8')
 		link(rel="stylesheet" type="text/css" href="/static/css/reset.css")
@@ -7,8 +7,10 @@ html
 		link(rel="stylesheet" type="text/css" href="/static/css/admin.css")
 		link(rel="stylesheet" type="text/css" href="/static/css/admin-pro.css")
 		script(src="/static/js/jquery-1.11.3.min.js")
+		script(src="/static/js/angular.min.js")
+		script(src="/static/js/angular-admin-controller.js")
 		title 后台管理
-	body
+	body(ng-controller="adminController")
 		.admin-wrap
 			.admin-wrap-left
 				.admin-title
@@ -54,7 +56,8 @@ html
 							a(href="#") 财务管理
 			.admin-wrap-right
 				.admin-welcome
-					input(type="button" value="退出")
+					form(method="get" action="/admin/logout")
+						input(type="submit" value="退出")
 					h2
 						| 你好！
 						span 管理员

@@ -11,11 +11,11 @@ html
 			.hr
 			.admin-login
 				p 后台管理登录
-				form(method="post" action="#")
+				form(method="post" action="/admin/login")
 					label 用户名：
-					input(type="text")
+					input(type="text" name="adminname")
 					label 密码：
-					input(type="password")
-				p.admin-login-sub
-					input(type="submit")
+					input(type="password" name="adminpassword")
+					p.admin-login-sub
+						input(type="submit" value="提交")
 

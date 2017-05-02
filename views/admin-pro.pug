@@ -2,20 +2,20 @@ extends ./admin.pug
 block content
 	.section-wrap
 		h1 产品信息编辑
-		form(method="post" action="#")
+		form(method="post" action="/admin/addProduct")
 			ul
 				li
-					label 商品名称：
-					input(type="text")
+					label(for="") 商品名称：
+					input(type="text" id="" name="title")
 				li
-					label 商品图片：
-					input(type="file")
+					label(for="") 商品图片：
+					input(type="file" id="" name="imgFile")
 				li
-					label 商品市场价：
-					input(type="text")
+					label(for="") 商品市场价：
+					input(type="text" id="" name="delPrice")
 				li
-					label 商品售价：
-					input(type="text")
+					label(for="") 商品售价：
+					input(type="text" id="" name="shopPrice")
 				li
 					input(type="submit" value="添加")
 	.section-wrap
@@ -30,12 +30,12 @@ block content
 					th 添加日期
 					th(colspan="2") 操作
 			tbody
-				tr
+				tr(ng-repeat="product in products")
 					td
-						img(src="/static/images/icon.gif")
-					td 正品柑橘
-					td 100
-					td 50
+						img(src="/static/images/{{product.imgFile}}")
+					td(ng-bind="product.tilte")
+					td(ng-bind="product.delPrice")
+					td(ng-bind="product.shopPrice")
 					td 1992.1.2
 					td 删除
 					td 修改
