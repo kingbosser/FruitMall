@@ -1,34 +1,49 @@
 angular.module('myApp',[]).controller('myController',['$scope','$http',function($scope,$http){
+	
 	//获取用户信息
 	$http.get('/user/profile').then(function(data){
-		$scope.user = data;
+		$scope.users = data.data;
 		$scope.error = "";
 	}).catch(function(data){
-		$scope.user = {};
+		$scope.users = {};
 		$scope.error = data;
 	});
 	//获取产品信息
 	$http.get('/product/profile').then(function(data){
-		$scope.products = data;
-		$scope.product = data[0];
+		$scope.products = data.data;
+		$scope.product = [];
 	}).catch(function(data){
 		$scope.products = [];
 	});
-
+    $scope.content = '/static/index.html';
+    
 	//获取订单信息
-	$http.get('/order/profile').then(function(data){
-		$scope.orders = data;
-	}).catch(function(data){
-		$scope.orders = [];
-	});
+	// $http.get('/order/profile').then(function(data){
+	// 	$scope.orders = data;
+	// }).catch(function(data){
+	// 	$scope.orders = [];
+	// });
 
 	//点击图片呈现对应的试图，也就是向详情页传递产品的id
 	$scope.setProduct = function(productId){
 		$scope.product = this.product;
+		$scope.content = '/static/product-detail.html';
 	}
-
+    $scope.setContent = function(filename){
+    	$scope.content = '/static/'+filename;
+    }
+    $scope.setContent1 = function(filename){
+    	if(!$scope.users.cart){
+			alert('请登录后开始选购')
+		}else{
+			$scope.content = '/static/'+filename;
+		}	
+    }
 	//添加至购物车
 	$scope.addToCart = function(productId){
+		if(!$scope.users.cart){
+			alert('请登录后开始选购')
+		};
 		var found = false;
 		for(var i = 0; i< $scope.users.cart.length;i++){
 			var item = $scope.users.cart[i];
@@ -61,7 +76,7 @@ angular.module('myApp',[]).controller('myController',['$scope','$http',function(
 	}
 
 	//从购物车删除物品
-	exports.deleteFromCart = function(productId){
+	$scope.deleteFromCart = function(productId){
 		for(var i = 0;i < $scope.users.cart.length;i++){
 			var item = $scope.users.cart[i];
 			if(item.product[0]._id == productId){
@@ -78,14 +93,24 @@ angular.module('myApp',[]).controller('myController',['$scope','$http',function(
 
 
 	//清空购物车
-	exports.emptyCart = function(){
+	$scope.emptyCart = function(){
 		$scope.users.cart = [];
+	
+		$http.post('/user/cart',{updatedCart: $scope.users.cart}).then(function(data){
+
+		}).catch(function(data){
+			console.log(data);
+		});
 	}
-	$http.post('/user/cart',{updatedCart: $scope.users.cart}).then(function(data){
 
-	}).catch(function(data){
-		console.log(data);
-	});
+	//添加地址
+	$scope.addAddr = function(){
+		console.log($scope.users.address[0]);
+		$http.post('/user/addr',{updatedAddr: $scope.users.address[0]}).then(function(data){
 
+		}).catch(function(data){
+			console.log(data);
+		})
+	}
 
 }]);

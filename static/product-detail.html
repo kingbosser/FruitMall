@@ -1,0 +1,18 @@
+<div class="product-detail-container">
+	<div class="subnav">
+		<a href="/">首页</a><span class="rightgap">&gt;</span><a href="/product">水果选购</a><span class="rightgap">&gt;</span><span>{{product.title}}</span>
+	</div>
+	<div class="prodetail">
+		<h1>{{product.title}}</h1>
+		<div class="detail-cont clearfix">
+			<div class="detail-pic"><img ng-src="/static/images/{{product.imgFile}}"></div>
+			<div class="detail-right">
+				<dl><dt>销售价:</dt><dd class="detail-price">￥{{product.delPrice}}</dd></dl>
+				<dl><dt>市场价：</dt><dd><del>￥{{product.shopPrice}}</del></dd></dl>
+				<dl><dt>送至：</dt><dd>{{users.address[0].addr}}</dd></dl>
+				<dl><dt>数量：</dt><dd><a href="javascript:;">-</a><input type="text" name="detail-num" value="1" min="1" max="9999"><a href="javascript:;">+</a></dd></dl>
+				<input type="submit" name="" value="加入购物车" ng-click="addToCart(product._id)">
+			</div>
+		</div>
+	</div>
+</div>

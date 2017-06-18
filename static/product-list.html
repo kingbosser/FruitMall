@@ -1,0 +1,59 @@
+<div class="product-list-Container">
+	<div class="subnav">
+		<a href="#">首页</a><span class=".rightgap">&gt;</span><span>水果选购</span>
+	</div>
+	<div class="proselect">
+		<div class="proselect-tit clearfix">
+			<div class="proselect-tit-left"><strong>商品筛选</strong><span>(共{{products.length}}件商品)</span></div>
+			<div class="proselect-tit-right">
+				<p>重置筛选项&nbsp;></p>
+			</div>
+		</div>
+		<div class="proselected">
+			<dl class="yourselected clearfix">
+				<dt>您已选择：</dt><dd></dd>
+			</dl>
+			<dl class="proclassify clearfix">
+				<dt>水果分类：</dt><dd>柑橘</dd><dd>葡萄</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="proclassifyrule clearfix">
+		<div class="prosort">
+			<label>排序：</label>
+			<select>
+				<option value="desc-price">按价格从高到低</option>
+				<option value="asc-price">按价格从高到低</option>
+				<option value="cont-buy">按价格从高到低</option>
+			</select>
+			<input type="checkbox" name="is-stroe" id="is-stroe">
+			<label for="is-stroe">仅显示有货</label>
+		</div>
+		<div class="pageview">
+			<div class="pagecont">
+				<span class="pagecurrent">1</span>/<span class="pagetotal">{{products.length}}</span>
+			</div>
+			<div class="pageaction">
+				<a href="javascript:;" class="pageprev"><i></i></a>
+				<a href="javascript:;" class="pagenext"><i></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="produclist">
+		<ul>
+			<li class="proitem" ng-repeat="product in products">
+				<a href="#" class="propic">
+					<img ng-src="/static/images/{{product.imgFile}}" ng-click="setProduct(product._id)">
+				</a>
+				<h3 class="proname">{{product.title}}</h3>
+				<div class="proprice">
+					<ins>￥{{product.shopPrice}}</ins>
+					<del>市场价：￥<span>{{product.delPrice}}</span></del>
+				</div>
+				<div class="proaction">
+					<a href="#" ng-click="addToCart(product._id)">加入购物车</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

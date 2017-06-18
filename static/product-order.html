@@ -1,0 +1,90 @@
+<div class="product-order-container">
+	<div class="car-title"><h1>购物车</h1></div>
+	<div class="car-step">
+		<table>
+			<tbody>
+				<tr>
+					<td class="car-bg"><i>1</i>购物车</td><td>-></td><td class="car-active car-bg"><i>2</i>填写和提交订单</td><td>-></td><td class="car-bg"><i>3</i>订单提交成功</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<form class="order-check" action="#" method="post">
+		<h2>填写和提交订单</h2>
+		<div class="order-info">
+			<div class="info-tit">
+				<h3>收货信息</h3>
+			</div>
+			<div class="info-set">
+				<table>
+					<tbody>
+						<tr>
+							<td colspan="1"></td>
+							<td>收货地址：</td>
+							<td><input type="text" name="" ng-model="users.address[0].addr"></td>
+							<td colspan="12"></td>
+						</tr>
+						<tr>
+							<td colspan="1"></td>
+							<td>收货人姓名：</td>
+							<td><input type="text" name="" ng-model="users.address[0].name"></td>
+						</tr>
+						<tr>
+							<td colspan="1"></td>
+							<td>联系方式：</td>
+							<td><input type="text" name="" ng-model="users.address[0].tel"></td>
+						</tr>
+						<tr>
+							<td colspan="1"></td>
+							<td><a href="" ng-click="addAddr()">确认收货信息</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="order-pay">
+				<div class="info-tit">
+					<h3>支付方式</h3>
+				</div>
+				<div class="order-pay-method">
+					<table>
+						<tbody>
+							<tr>
+								<td colspan="1"></td>
+								<td><input type="radio" name="pay-method" value="" id="pay1"><label for="pay1">支付宝</label></td>
+								<td colspan="13"></td>
+							</tr>
+							<tr>
+								<td colspan="1"></td>
+								<td><input type="radio" name="pay-method" value="" id="pay2"><label for="pay2">微信支付</label></td>
+							</tr>
+							<tr>
+								<td colspan="1"></td>
+								<td><a href="">确认支付方式</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="order-detail">
+				<div class="info-tit">
+					<h3>商品清单</h3>
+				</div>
+				<div class="order-detail-list">
+					<table>
+						<tbody>
+							<tr>
+								<td colspan="6">商品</td><td>销售价</td><td>数量</td><td>小计</td>
+							</tr>
+							<tr ng-repeat="item in users.cart" ng-init="product=item.product[0]">
+								<td colspan="6">{{product.title}}</td><td>{{product.shopPrice}}</td><td>{{item.quantity}}</td><td>{{product.shopPrice}}*{{item.quantity}}</td>
+							</tr>
+							<tr>
+								<td colspan="8"></td><td class="order-detail-sub"><input type="button" name="" value="提交订单" ng-click="setContent('product-success.html')"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

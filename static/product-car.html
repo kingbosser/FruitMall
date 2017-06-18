@@ -1,0 +1,44 @@
+<div class="product-car-container">
+	<div class="car-title">
+		<h1>购物车</h1>
+	</div>
+	<div class="car-step">
+		<table>
+			<tbody>
+				<tr>
+					<td class="car-active car-bg"><i>1</i>购物车</td><td>-></td><td class="car-bg"><i>2</i>填写和提交订单</td><td>-></td><td class="car-bg"><i>3</i>订单提交成功</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="car-content">
+		<h2>已选择商品</h2>
+		<form action="#" method="post">
+			<table>
+				<thead>
+					<tr>
+						<th>商品图片</th>
+						<th>商品名称</th>
+						<th>数量</th>
+						<th>销售价</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in users.cart" ng-init="product=item.product[0]">
+						<td><a href="" class="car-content-img"><img ng-src="/static/images/{{product.imgFile}}" ng-click="setProduct(product._id)"></a></td><td>{{product.title}}</td><td><a href="javascript:;">-</a><input type="text" name="" value="{{item.quantity}}"><a href="javascript:;">+</a></td><td>{{product.shopPrice}}</td><td ng-click="deleteFromCart(product._id)">删除</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="3"></td><td>总金额</td><td>￥{{cartTotal()}}</td>
+					</tr>
+					<tr>
+						<td><a href="" ng-click="emptyCart()">清空购物车</a></td><td colspan="2"></td><td><a href="" ng-click="setContent('product-list.html')">继续购物</a></td>
+						<td><input type="button" name="" value="下单结算" ng-click="setContent('product-order.html')"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+	</div>
+</div>

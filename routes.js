@@ -8,27 +8,16 @@ module.exports = function(app){
 
 	app.get('/',function(req,res){
 		if(req.session.user){
-			res.render('index.pug',{
+			res.render('layout.html',{
 				username: req.session.username
-
 			});
 		}else{
-			res.render('index.pug',{
-
+			res.render('layout.html',{
+				username: "新用户"
 			});
 		}
 	});
 
-	app.get('/signup',function(req,res){
-		res.render('signup.pug');
-	});
-
-	app.get('/login',function(req,res){
-		if(req.session.user){
-			res.redirect('/');
-		}
-		res.render('login.pug');
-	});
 
 	app.get('/logout',function(req,res){
 		req.session.destroy(function(){
@@ -43,13 +32,13 @@ module.exports = function(app){
 
 	app.get('/admin',function(req,res){
 		if(req.session.adminname){
-			res.render('admin-pro.pug');
+			res.render('admin.html');
 		}else{
 			res.redirect('/admin/login');
 		}
 	});
 	app.get('/admin/login',function(req,res){
-		res.render('admin-login.pug');
+		res.render('admin-login.html');
 	});
 	app.get('/admin/logout',function(req,res){
 		req.session.destroy(function(){
@@ -57,43 +46,39 @@ module.exports = function(app){
 		});
 	})
 	app.post('/admin/login',users.adminlogin);
+	app.get('/product/profile',products.getProducts);
 
-	app.get('/product/list',function(req,res){
-		if(req.session.user){
-			res.render('product-list.pug',{
-				username: req.session.username
-			});
-		}else{
-			res.render('product-list.pug');
-		}
-		
-	});
-	app.get('/product/detail',function(req,res){
-		if(req.session.user){
-			res.render('product-detail.pug',{
-				username: req.session.username
-			});
-		}else{
-			res.render('product-detail.pug');                                                    
-		}
-	});
+	// app.get('/product/list',function(req,res){
+	// 	if(req.session.user){
+	// 		res.render('product-list.html',{
+	// 			username: req.session.username
+	// 		});
+	// 	}else{
+	// 		res.render('product-list.html');
+	// 	}
+	// });
+	// app.get('/product/detail',function(req,res){
+	// 	if(req.session.user){
+	// 		res.render('product-detail.html',{
+	// 			username: req.session.username
+	// 		});
+	// 	}else{
+	// 		res.render('product-detail.html');                                                    
+	// 	}
+	// });
 
 	app.post('/user/cart',users.updateCart);                                                                                                                                                               
 
 	//后台信息展示
-	app.get('/admin/addProduct',function(req,res){
-		if(req.session.adminname){
-			res.render('admin-pro.pug');
-		}else{
-			res.redirect('/admin/login');
-		}
-	});
-	app.post('/admin/addProduct',function(req,res){
-		if(req.session.adminname){
-			products.addProduct();
-		}else{
-			res.redirect('/admin/login');
-		}
-	})
+	// app.get('/admin/addProduct',function(req,res){
+	// 	if(req.session.adminname){
+	// 		res.render('admin-pro.html');
+	// 	}else{
+	// 		res.redirect('/admin/login');
+	// 	}
+	// });
+	app.post('/admin',products.addProduct);
+	app.post('/admin/remove',products.removeProduct);
+	app.post('/user/addr',users.updateAddr);
 
 }

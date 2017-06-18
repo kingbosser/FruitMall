@@ -1,0 +1,127 @@
+.baike-num1{
+	width: 1200px;
+	margin: 0 auto;
+	background: url(/static/images/yuan.png) no-repeat center center;
+	position: relative;
+	height: 1000px;
+}
+.baike-num1 img{
+	position: absolute;
+	left: 360px;
+	top: 340px;
+}
+.num1-cont,.num2-cont,.num3-cont,.num4-cont{
+	width: 280px;
+	position: absolute;
+}
+.num1-cont{
+	left: 480px;
+	top: 100px;
+}
+.num2-cont{
+	right: 0px;
+	top: 368px;
+}
+.num3-cont{
+	bottom: 40px;
+	left: 480px;
+}
+.num4-cont{
+	left: 0px;
+	top: 368px;
+}
+.num1-cont h2{
+	font-size: 20px;
+	color: #5fc863;
+	font-weight: bold;
+}
+.num1-cont p,.num2-cont p,.num3-cont p,.num4-cont p{
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 2;
+	padding-top: 16px;
+}
+.num2-cont h2{
+	font-size: 20px;
+	color: #fd9433;
+	font-weight: bold;
+}
+.num3-cont h2{
+	font-size: 20px;
+	color: #7f6c00;
+	font-weight: bold;
+}
+.num4-cont h2{
+	font-size: 20px;
+	color: #ff6983;
+	font-weight: bold;
+}
+.baike-num2{
+	width: 1200px;
+	margin:0 auto;
+}
+.wrap-img{
+	width: 100%;
+	height: 450px;
+}
+.baike-num3{
+	width: 1200px;
+	margin: 0 auto;
+}
+.baike-num3-cont{
+	width: 100%;
+}
+.num3-detail-left{
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+.num3-detail-left a{
+	float: left;
+	width: 40%;
+}
+.num3-detail-left .h{
+	float: right;
+	margin-left: 60px;
+	width: 40%;
+}
+.num3-detail-left .h h2,.num3-detail-right .h h2{
+	color: #333;
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0px;
+}
+.num3-detail-left .h h3,.num3-detail-right .h h3{
+	color: #333;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 20px 0px;
+}
+.num3-detail-left .h p,.num3-detail-right .h p{
+	color: #333;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+.num3-detail-right{
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+.num3-detail-right a{
+	float: right;
+	width: 40%;
+}
+.num3-detail-right .h{
+	float: left;
+	/*margin-left: 60px;*/
+	width: 40%;
+}
+.num3-detail-right .h h2{}
+.num3-detail-right .h h3{}
+.num3-detail-right .h p{}

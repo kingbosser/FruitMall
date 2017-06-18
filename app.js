@@ -9,25 +9,16 @@ require("./models/model.js");
 
 
 var db = mongoose.connect("mongodb://localhost/myapp"); 
-// var options = {
-// 	db: { native_parser: true },
-// 	server: { poolSize: 5 },
-// 	replset: { rs_name: 'myReplicaSetName' },
-// 	user: 'kingboss',
-// 	pass: 'wpy678086'
-// }
-// var db = mongoose.connect("mongodb://localhost/myapp", options);
-// var db = mongoose.createConnection();
-// db.openSet("mongodb://kingboss:wpy678086@localhost:27017/myapp");
+
 
 
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.engine('pug',require('pug').__express);
-app.set('views','./views');
-app.set('view engine','pug');
+app.engine('.html',require('ejs').__express);
+app.set('views','./view');
+app.set('view engine','html');
 
 
 app.use(cookieParser());

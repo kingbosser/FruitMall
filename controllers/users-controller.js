@@ -15,11 +15,10 @@ exports.signup = function(req,res){
 	var user = new User({username:req.body.username});
 	user.set('password',hashPW(req.body.password));
 	user.set('email',req.body.email);
-	console.log(1)
 	console.log(req.body);
 	user.save(function(err){
 		if(err){
-			res.redirect('/signup');
+			res.redirect('/');
 			console.log(err);
 		}else{
 			req.session.user = user._id;
@@ -45,7 +44,7 @@ exports.login = function(req,res){
 		}
 		if(err){
 			req.session.regenerate(function(){
-				res.redirect('/login');
+				res.redirect('/');
 			});
 			console.log(err);
 		}
@@ -93,6 +92,16 @@ exports.updateCart = function(req,res){
 	User.update({username: req.session.username},{$set:{cart:req.body.updatedCart}}).exec(function(err,results){
 		if(err || results < 1){
 			res.status(404).json({err:'更新购物车失败'});
+		}else{
+			res.status(200).json({msg:'更新成功'});
+		}
+	})
+};
+//更新地址
+exports.updateAddr = function(req,res){
+	User.update({username: req.session.username},{$set:{address:req.body.updatedAddr}}).exec(function(err,results){
+		if(err || results < 1){
+			res.status(404).json({err:'更新地址失败'});
 		}else{
 			res.status(200).json({msg:'更新成功'});
 		}

@@ -1,0 +1,54 @@
+.story-cont{
+	width: 1200px;
+	margin: 0 auto;
+	color: #555555;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+	text-indent: 2em;
+}
+.story-cont p{
+	margin-bottom: 20px;
+}
+.com-rule{
+	width: 1200px;
+	margin: 0 auto;
+}
+.rule-list ul{
+	width: 100%;
+	
+}
+.rule-list-cont{
+	float: left;
+	width: 30%;
+	margin-left: 28px;
+}
+.rule-list-cont a{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.rule-list-cont h3{
+	color: #74c230;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 16px 0px;
+}
+.rule-list-cont p{
+	color: #555;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	padding: 0px 20px;
+	line-height: 2;
+}
+.rongyu-img{
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 40px;
+}
+.rongyu-img img{
+
+}

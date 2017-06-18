@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/public.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-list.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-detail.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-car.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-order.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-success.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/aboutUs.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/product-baike.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/login.css">
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/angular.min.js"></script>
+	<script type="text/javascript" src="/static/js/angular-controller.js"></script>
+	<title>老王农场</title>
+</head>
+<body ng-controller="myController">
+	<div class="top">
+		<div class="top-welcome clearfix">
+			<div class="top-welcome-left">
+				<strong>欢迎来到老王水果基地!</strong><span>送货至：</span><div>重庆市</div>
+			</div>
+			<div class="top-welcome-right">
+				<div><span><%=username%></span><form method="get" action="/logout" ng-show="users.cart"><input type="submit" name="" value="注销" ng-click="setContent('index.html')"></form></div><div><a href="" ng-click="setContent('login.html')">登录</a><a href="" ng-click="setContent('signup.html')" ng-hide="users.cart">注册</a></div><i>|</i><p>18883993424</p>
+			</div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="header-main clearfix">
+			<div class="header-main-left">
+				<div class="header-left-logo"><img src="/static/images/logo.png" alt="" title=""></div>
+			</div>
+			<div class="header-main-right">
+				<div class="header-right-search">
+					<form method="post" action="#">
+						<input type="text" name="key" placeholder="请输入你想吃的水果"><input type="submit" name="搜索">
+					</form>
+				</div>
+				<div class="header-right-car">
+					<p><a href="" ng-click="setContent1('product-car.html')">我的购物车</a></p><span ng-show="users.cart">{{users.cart.length}}</span>
+				</div>
+				<p>推荐<span>不知火</span><span>柑橘</span><span>葡萄</span><span>香蕉</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li><img src="/static/images/icon.gif"></li>
+			<li><a href="#" ng-click="setContent('index.html')">首页</a></li>
+			<li><a href="#" ng-click="setContent('aboutUs.html')">关于我们</a></li>
+			<li><a href="#" ng-click="setContent('product-list.html')">水果选购</a></li>
+			<li><a href="#" ng-click="setContent('product-baike.html')">水果百科</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</div>
+	<div id="main-content">
+		<div ng-include="content"></div>
+	</div>
+	<div class="link clearfix">
+		<div class="link-wrap">
+			<div class="link-list">
+				<dl><dt><a href="#">新手指南</a></dt><dd><a href="">购物流程</a></dd><dd><a href="">用户注册</a></dd><dd><a href="">在线下单</a></dd><dd><a href="">商品须知</a></dd></dl>
+				<dl><dt><a href="#">配送说明</a></dt><dd><a href="">运费说明</a></dd><dd><a href="">运费方式</a></dd><dd><a href="">发票说明</a></dd><dd><a href="">运送时间</a></dd></dl>
+				<dl><dt><a href="#">售后服务</a></dt><dd><a href="">退货规则</a></dd><dd><a href="">保证承诺</a></dd><dd><a href="">验货签收</a></dd><dd><a href="">损坏赔偿</a></dd></dl>
+				<dl><dt><a href="#">公司服务</a></dt><dd><a href="">水果预约</a></dd><dd><a href="">公司简介</a></dd><dd><a href="">活动专区</a></dd><dd><a href="">定制专区</a></dd></dl>
+				<dl><dt><a href="#">免责声明</a></dt><dd><a href="">法律责任</a></dd><dd><a href="">公司条约</a></dd><dd><a href="">订购合约</a></dd><dd><a href="">服务评价</a></dd></dl>
+			</div>
+			<div class="link-right"><img src="/static/images/logo.png"><p>客服电话：18883993424</p><p>地址：四川仁寿水果基地</p>
+			</div>
+		</div>
+	</div>
+	<div class="copy"><p>All Rights Reserved©2011-2017 | 公司统一信用码 913101165852570112</p></div>
+</body>
+</html>

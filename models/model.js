@@ -71,3 +71,24 @@
  	adminpassword: String
  });
   mongoose.model('Admin',AdminShema);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

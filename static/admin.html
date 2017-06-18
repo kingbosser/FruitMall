@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="adminApp">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/icon.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/admin.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/admin-pro.css">
+	<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/static/js/angular.min.js"></script>
+	<script type="text/javascript" src="/static/js/angular-admin-controller.js"></script>
+	<title>后台管理</title>
+</head>
+<body ng-controller="adminController">
+	<div class="admin-wrap">
+		<div class="admin-wrap-left">
+			<div class="admin-title"><h1>电商后台管理系统</h1></div>
+			<div class="admin-section">
+				<ul>
+					<li class="admin-active"><i class="icono-cart"></i><i class="icono-caretLeft"></i><a href="">产品管理</a><ul>
+						<li><a href="">产品信息</a></li>
+						<li><a href="">产品评价</a></li>
+					</ul></li>
+					<li>
+						<i class="icono-barChart"></i><i class="icono-caretLeft"></i><a href="#">销售管理</a>
+					</li>
+					<li>
+						<i class="icono-file"></i><i class="icono-caretLeft"></i><a href="#">订单管理</a>
+					</li>
+					<li>
+						<i class="icono-ruler"></i><i class="icono-caretLeft"></i><a href="#">库存管理</a>
+					</li>
+					<li>
+						<i class="icono-document"></i><i class="icono-caretLeft"></i><a href="#">内容管理</a>
+					</li>
+					<li>
+						<i class="icono-user"></i><i class="icono-caretLeft"></i><a href="#">客户管理</a>
+					</li>
+					<li>
+						<i class="icono-gear"></i><i class="icono-caretLeft"></i><a href="#">系统管理</a>
+					</li>
+					<li>
+						<i class="icono-pieChart"></i><i class="icono-caretLeft"></i><a href="#">财务管理</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="admin-wrap-right">
+			<div class="admin-welcome">
+				<form method="get" action="/admin/logout"><input type="submit" name="" value="退出"></form>
+				<h2>你好！<span>管理员</span></h2>
+			</div>
+			<div id="admin-main-content" ng-include="admincontent"></div>
+		</div>
+	</div>
+</body>
+</html>
